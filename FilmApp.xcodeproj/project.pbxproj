@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4037D12328D9C28C00E598A8 /* DownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4037D12228D9C28C00E598A8 /* DownloaderClient.swift */; };
 		40EDE42E28D8AAA9009915EA /* FilmAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EDE42D28D8AAA9009915EA /* FilmAppApp.swift */; };
 		40EDE43028D8AAA9009915EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EDE42F28D8AAA9009915EA /* ContentView.swift */; };
 		40EDE43228D8AAAB009915EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EDE43128D8AAAB009915EA /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4037D12228D9C28C00E598A8 /* DownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderClient.swift; sourceTree = "<group>"; };
 		40EDE42A28D8AAA9009915EA /* FilmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EDE42D28D8AAA9009915EA /* FilmAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmAppApp.swift; sourceTree = "<group>"; };
 		40EDE42F28D8AAA9009915EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +36,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4037D12128D9C22400E598A8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4037D12228D9C28C00E598A8 /* DownloaderClient.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		40EDE42128D8AAA8009915EA = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +63,7 @@
 		40EDE42C28D8AAA9009915EA /* FilmApp */ = {
 			isa = PBXGroup;
 			children = (
+				4037D12128D9C22400E598A8 /* Service */,
 				40EDE43E28D8AAE0009915EA /* App */,
 				40EDE43D28D8AABF009915EA /* View */,
 				40EDE43C28D8AAB6009915EA /* ViewModel */,
@@ -175,6 +186,7 @@
 				40EDE43028D8AAA9009915EA /* ContentView.swift in Sources */,
 				40EDE44028D8AC22009915EA /* Film.swift in Sources */,
 				40EDE42E28D8AAA9009915EA /* FilmAppApp.swift in Sources */,
+				4037D12328D9C28C00E598A8 /* DownloaderClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

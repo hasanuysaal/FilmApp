@@ -11,26 +11,27 @@ struct Film : Codable {
         
     let title : String
     let year : String
-    let imdbId : String
+    let imdbID : String
     let type : String
     let poster : String
     
     private enum CodingKeys: String, CodingKey{
         case title = "Title"
         case year = "Year"
-        case imdbId = "imdbId"
+        case imdbID = "imdbID"
         case type = "Type"
         case poster = "Poster"
     }
     
 }
 
-struct responseFilms {
+struct ResponseFilms : Codable {
     
-    var films : [Film]
+    let films : [Film]
     
-    private enum Codingkeys : String, CodingKey {
+    private enum CodingKeys : String, CodingKey {
         case films = "Search"
+        
     }
     
 }
