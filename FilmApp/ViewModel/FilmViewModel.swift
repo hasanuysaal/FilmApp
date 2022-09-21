@@ -53,6 +53,10 @@ struct FilmViewModel {
         film.type
     }
     
+    var imdbID : String {
+        film.imdbID
+    }
+    
     var poster : String {
         film.poster
     }
