@@ -25,7 +25,7 @@ struct FilmListView: View {
             
         VStack {
         TextField("Search Films", text: $searchingFilm) {
-            self.filmListViewModel.searchFilms(filmName: searchingFilm)
+            self.filmListViewModel.searchFilms(filmName: searchingFilm.trimmingCharacters(in: .whitespacesAndNewlines).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? searchingFilm)
         }.padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
         
