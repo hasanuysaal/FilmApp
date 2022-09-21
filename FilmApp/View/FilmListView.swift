@@ -14,14 +14,27 @@ struct FilmListView: View {
     init() {
         
         self.filmListViewModel = FilmListViewModel()
-        self.filmListViewModel.searchFilms(filmName: "titanic")
+        self.filmListViewModel.searchFilms(filmName: "leon")
         
     }
-    
+     
     var body: some View {
         List(filmListViewModel.films, id: \.imdbID) { film in
+            HStack(alignment: .top) {
+                Image("poster")
+                    .resizable()
+                    .frame(width: 60, height: 70)
             
-            Text(film.title)
+                VStack(alignment: .leading){
+                    Text(film.title)
+                        .font(.title3)
+                        .foregroundColor(Color.pink)
+                        .fontWeight(.bold)
+                    Text(film.year)
+                        .fontWeight(.regular)
+                        .foregroundColor(Color.indigo)
+                }
+            }
         }
 
     }
@@ -29,6 +42,14 @@ struct FilmListView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        FilmListView()
+        Group {
+           FilmListView()
+                .previewDevice("iPhone 11")
+                .previewDisplayName("iPhone 11")
+                    
+           FilmListView()
+                .previewDevice("iPhone 8")
+                .previewDisplayName("iPhone 8")
+        }
     }
 }
