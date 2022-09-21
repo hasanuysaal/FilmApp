@@ -11,6 +11,8 @@ struct FilmListView: View {
     
     @ObservedObject var filmListViewModel : FilmListViewModel
     
+    @State var searchingFilm = ""
+    
     init() {
         
         self.filmListViewModel = FilmListViewModel()
@@ -19,8 +21,15 @@ struct FilmListView: View {
     }
      
     var body: some View {
-        
         NavigationView {
+            
+        VStack {
+        TextField("Search Films", text: $searchingFilm) {
+            self.filmListViewModel.searchFilms(filmName: searchingFilm)
+        }.padding()
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+        
+        
         List(filmListViewModel.films, id: \.imdbID) { film in
             HStack(alignment: .top) {
                 CustomizedImage(url: film.poster)
@@ -38,6 +47,7 @@ struct FilmListView: View {
                 }
             }
         }.navigationTitle(Text("FilmApp"))
+        }
         }
     }
 }
