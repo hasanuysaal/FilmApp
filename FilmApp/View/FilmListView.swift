@@ -16,7 +16,6 @@ struct FilmListView: View {
     init() {
         
         self.filmListViewModel = FilmListViewModel()
-        self.filmListViewModel.searchFilms(filmName: "leon")
         
     }
      
@@ -31,21 +30,27 @@ struct FilmListView: View {
         
         
         List(filmListViewModel.films, id: \.imdbID) { film in
-            HStack(alignment: .top) {
-                CustomizedImage(url: film.poster)
-                    .frame(width: 60, height: 70)
-            
-                VStack(alignment: .leading){
-                    Text(film.title)
-                        .font(.body)
-                        .foregroundColor(Color.pink)
-                        .fontWeight(.bold)
-                    Text(film.year)
-                        .font(.caption)
-                        .fontWeight(.regular)
-                        .foregroundColor(Color.indigo)
+            NavigationLink {
+                FilmDetailView(imdbId: film.imdbID)
+            } label: {
+                HStack(alignment: .top) {
+                    CustomizedImage(url: film.poster)
+                        .frame(width: 60, height: 70)
+                
+                    VStack(alignment: .leading){
+                        Text(film.title)
+                            .font(.body)
+                            .foregroundColor(Color.pink)
+                            .fontWeight(.bold)
+                        Text(film.year)
+                            .font(.caption)
+                            .fontWeight(.regular)
+                            .foregroundColor(Color.indigo)
+                    }
                 }
             }
+
+            
         }.navigationTitle(Text("FilmApp"))
         }
         }
