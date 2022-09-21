@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400C603028DB016B002B346E /* CustomizedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C602F28DB016B002B346E /* CustomizedImage.swift */; };
 		4037D12328D9C28C00E598A8 /* DownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4037D12228D9C28C00E598A8 /* DownloaderClient.swift */; };
 		4037D12528D9EEA700E598A8 /* FilmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4037D12428D9EEA700E598A8 /* FilmViewModel.swift */; };
 		40EDE42E28D8AAA9009915EA /* FilmAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EDE42D28D8AAA9009915EA /* FilmAppApp.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		400C602F28DB016B002B346E /* CustomizedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedImage.swift; sourceTree = "<group>"; };
 		4037D12228D9C28C00E598A8 /* DownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderClient.swift; sourceTree = "<group>"; };
 		4037D12428D9EEA700E598A8 /* FilmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewModel.swift; sourceTree = "<group>"; };
 		40EDE42A28D8AAA9009915EA /* FilmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				40EDE42F28D8AAA9009915EA /* FilmListView.swift */,
+				400C602F28DB016B002B346E /* CustomizedImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400C603028DB016B002B346E /* CustomizedImage.swift in Sources */,
 				40EDE43028D8AAA9009915EA /* FilmListView.swift in Sources */,
 				40EDE44028D8AC22009915EA /* Film.swift in Sources */,
 				4037D12528D9EEA700E598A8 /* FilmViewModel.swift in Sources */,

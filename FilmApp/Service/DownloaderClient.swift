@@ -7,7 +7,9 @@
 
 import Foundation
 
-class DownloaderClient {
+class DownloaderClient : ObservableObject {
+    
+    @Published var downloadedImage : Data?
     
     func downloadFilms (search: String, completion: @escaping (Result<[Film]?, DownloaderError>) -> Void){
         
@@ -26,6 +28,27 @@ class DownloaderClient {
             }
             
             completion(.success(filmResponse.films))
+            
+        }.resume()
+        
+    }
+    
+    func downloadImages (url: String){
+        
+        //check the url is correct
+        guard let url = URL(string: url) else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            //check you can get the data
+            guard let data = data, error == nil else{
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.downloadedImage = data
+            }
             
         }.resume()
         

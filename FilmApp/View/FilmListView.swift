@@ -19,24 +19,26 @@ struct FilmListView: View {
     }
      
     var body: some View {
+        
+        NavigationView {
         List(filmListViewModel.films, id: \.imdbID) { film in
             HStack(alignment: .top) {
-                Image("poster")
-                    .resizable()
+                CustomizedImage(url: film.poster)
                     .frame(width: 60, height: 70)
             
                 VStack(alignment: .leading){
                     Text(film.title)
-                        .font(.title3)
+                        .font(.body)
                         .foregroundColor(Color.pink)
                         .fontWeight(.bold)
                     Text(film.year)
+                        .font(.caption)
                         .fontWeight(.regular)
                         .foregroundColor(Color.indigo)
                 }
             }
+        }.navigationTitle(Text("FilmApp"))
         }
-
     }
 }
 
