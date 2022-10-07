@@ -19,7 +19,7 @@ struct FilmDetailView: View {
             HStack(alignment: .center){
                 Spacer()
                 VStack{
-                    CustomizedImage(url: filmDetailViewModel.filmDetail?.poster ?? "poster")
+                    CustomizedImage(url: filmDetailViewModel.filmDetail?.poster ?? "loading")
                     .frame(width: UIScreen.main.bounds.width * 0.5, height: UIScreen.main.bounds.height * 0.3, alignment: .center)
                     .cornerRadius(15)
                     .shadow(color: .black, radius: 10, x: 1, y: 1)

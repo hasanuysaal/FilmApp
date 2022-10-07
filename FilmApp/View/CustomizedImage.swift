@@ -23,7 +23,7 @@ struct CustomizedImage: View {
             return Image(uiImage: UIImage(data: data)!)
                 .resizable()
         } else {
-            return Image("poster")
+            return Image("loading")
                 .resizable()
         }
     }
